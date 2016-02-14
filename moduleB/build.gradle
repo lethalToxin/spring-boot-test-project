@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.example:myplugin:0.1-SNAPSHOT")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'myplugin'
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.codehaus.groovy:groovy')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

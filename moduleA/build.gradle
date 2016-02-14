@@ -1,0 +1,17 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.example:myplugin:0.1-SNAPSHOT")
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'myplugin'
+
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.codehaus.groovy:groovy')
+}
